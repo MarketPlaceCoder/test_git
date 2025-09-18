@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Open Research PWA</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+  <meta name="theme-color" content="#0f172a">
+</head>
+<body>
+  <header>
+    <h1>Stock Research (Free, Public Sources)</h1>
+    <button id="installBtn" hidden>Install App</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <label for="ticker">Ticker</label>
+      <input id="ticker" placeholder="e.g., INTC" value="INTC" />
+      <button id="runBtn">Run analysis</button>
+    </section>
+
+    <section id="status" class="card small"></section>
+
+    <section id="verdict" class="card"></section>
+
+    <section id="modules" class="grid"></section>
+
+    <section class="card">
+      <h2>JSON Export</h2>
+      <pre id="jsonOut"></pre>
+      <button id="downloadJson">Download JSON</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>Only free, public, legal sources. Paywalled pages are returned as <code>restricted; visit link</code>.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
